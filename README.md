@@ -27,10 +27,14 @@ database:
 
 ## Steps Completed
 1. Created `app-config.yaml` with the defined structure.
-2. Validated the YAML syntax.
-3. Converted YAML to JSON using Python (`app-config.json`).
+2. Validated the YAML syntax using `yamllint`.
+3. Converted YAML to JSON using `yq`.
 
-## How to convert (if needed again)
+## How to convert & validate 
 ```bash
+# Validate YAML syntax
+yamllint app-config.yaml
+
+# Convert YAML to JSON
 yq . app-config.yaml > app-config.json
 ```
